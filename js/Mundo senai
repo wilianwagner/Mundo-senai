@@ -1,0 +1,117 @@
+var inNot = document.querySelector('[name ="entrada_not"]')
+var inAnd1 = document.querySelector('[name = entrada_and1]')
+var inAnd2 = document.querySelector('[name = entrada_and2]')
+var inOr1 = document.querySelector('[name = entrada_or1]')
+var inOr2 = document.querySelector('[name = entrada_or2]')
+var saidaOr = document.querySelector('#resultado_or')
+var saidaNot = document.querySelector('#resultado_not')
+//const checkbox = document.querySelector("input[type=checkbox]");
+
+const calc = document.querySelector("#calc")
+
+inNot.addEventListener("change", (e)=>{
+    if (inNot.checked) var not1 = 1
+    else not1 = 0
+    console.log("Not")
+    console.log(not1)
+    
+    if(not1 == 1){
+        saidaNot.innerHTML="<img src='img/ (1).PNG'>"
+        }
+        else{
+            saidaNot.innerHTML= "<img src='img/ (2).PNG'></img>"
+        }
+})
+
+inAnd1.addEventListener("change", (e)=>{
+    
+    if(inAnd1.checked) var and1 = 1
+    else and1 = 0
+    console.log("And 1")
+    console.log(and1)
+})
+
+inAnd2.addEventListener("change", (e)=>{
+    
+    if(inAnd2.checked) var and2 = 1
+    else and2 = 0
+    console.log("And 2")
+    console.log(and2)
+})
+
+inOr1.addEventListener("change", (e)=>{
+    
+    if(inOr1.checked) var or1 = 1
+    else or1 = 0
+    console.log("Or 1")
+    console.log(or1)
+})
+
+inOr2.addEventListener("change", (e)=>{
+    
+    if(inOr2.checked) var or2 = 1
+    else or2 = 0
+    console.log("Or 2")
+    console.log(or2)
+})
+if(not1 == 1){
+saidaNot.innerHTML="<img src='img/ (1).PNG'>"
+}
+else{
+    saidaNot.innerHTML= "<img src='img/ (2).PNG'></img>"
+}
+/*
+checkbox.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        if (inNot[0].checked) var not1 = 1
+    else not1 = 0
+    console.log("Not")
+    console.log(not1)
+
+    if(inAnd1[0].checked) var and1 = 1
+    else and1 = 0
+    console.log("And 1")
+    console.log(and1)
+    if(inAnd2[0].checked) var and2 = 1
+    else and2 = 0
+console.log("And 2")
+console.log(and2)
+      console.log("Checkbox is checked..");
+    } else {
+        if (inNot[0].checked) var not1 = 1
+    else not1 = 0
+    console.log("Not")
+    console.log(not1)
+
+    if(inAnd1[0].checked) var and1 = 1
+    else and1 = 0
+    console.log("And 1")
+    console.log(and1)
+    if(inAnd2[0].checked) var and2 = 1
+    else and2 = 0
+console.log("And 2")
+console.log(and2)
+      console.log("Checkbox is not checked..");
+    }
+  });
+*/
+/*
+calc.addEventListener("click", (e) => {
+
+
+    if (inNot[0].checked) var not1 = 1
+    else not1 = 0
+    console.log("Not")
+    console.log(not1)
+
+    if(inAnd1[0].checked) var and1 = 1
+    else and1 = 0
+    console.log("And 1")
+    console.log(and1)
+    if(inAnd2[0].checked) var and2 = 1
+    else and2 = 0
+console.log("And 2")
+console.log(and2)
+
+
+})*/
