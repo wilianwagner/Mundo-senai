@@ -1,3 +1,5 @@
+
+//___________________________________________ENTRADAS DAS PORTAS LÓGICAS__________________________________________
 var inNot = document.querySelector('[name ="entrada_not"]')
 var inAnd1 = document.querySelector('[name = entrada_and1]')
 var inAnd2 = document.querySelector('[name = entrada_and2]')
@@ -6,6 +8,7 @@ var inOr2 = document.querySelector('[name = entrada_or2]')
 var saidaOr = document.querySelector('#resultado_or')
 var saidaNot = document.querySelector('#resultado_not')
 var saidaAnd = document.querySelector('#resultado_and')
+//___________________________________DEFINIÇÃO DO ESTADO INICIAL_________________________________________________
 var and1 = 0
 var and2 = 0
 var or1 = 0
@@ -13,9 +16,11 @@ var or2 = 0
 
 //const checkbox = document.querySelector("input[type=checkbox]");
 
-
+//_____________________ADIÇÃO DE EVENTO COM MUDANÇA DE ESTADO DE CHECKBOX_____________________________________
 inNot.addEventListener("change", (e) => {
-    if (inNot.checked) var not1 = 1
+
+    //____________________________LÓGICA DA PORTA NOT__________________________________________________________
+    if (inNot.checked) var not1 = 1 
     else not1 = 0
     console.log("Not")
     console.log(not1)
@@ -28,6 +33,7 @@ inNot.addEventListener("change", (e) => {
     }
 })
 
+    //____________________________LÓGICA DA PORTA AND__________________________________________________________
 inAnd1.addEventListener("change", (e) => {
 
     if (inAnd1.checked) and1 = 1
@@ -57,7 +63,7 @@ inAnd2.addEventListener("change", (e) => {
         saidaAnd.innerHTML = " <p></p> <img src='img/desligado.png'>"
     }
 })
-
+    //____________________________LÓGICA DA PORTA OR__________________________________________________________
 inOr1.addEventListener("change", (e) => {
 
     if (inOr1.checked) or1 = 1
